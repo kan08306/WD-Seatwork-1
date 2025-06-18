@@ -13,7 +13,7 @@
 </div>
 <!-- TODO: Make a short description -->
 <div align="center">
-  This project is demonstrating my skills in making
+  This project is demonstrating my skills in making header and footer
 </div>
 
 <br />
