@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background-color: #111;
+  color: white;
+}
+
+.navbar4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #24252a;
+  color: white;
+  padding: 15px 30px;
+  position: relative;
+  z-index: 20;
+}
+
+.left4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo4 {
+  height: 35px;
+  width: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo4:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: 0.85;
+
+}
+
+.logo4:active {
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+.name4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.nav-links {
+  font-size: 1.25rem;
+  display: flex;
+  gap: 5rem;
+}
+
+.nav-links a,
+.mobile-menu a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.nav-links a::after,
+.mobile-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.mobile-menu a:hover::after {
+  width: 100%;
+}
+
+.right4 .header-button4 {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.right4 .header-button4:hover {
+  background-color: white;
+  color: #24252a;
+}
+
+.right4 .header-button4:active {
+  opacity: 0.8;
+}
+
+.open-btn {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn {
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.overlay {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.footer {
+  background-color: #24252a;
+  color: #aaa;
+  padding: 40px 60px 20px;
+  font-family: "Bebas Neue", sans-serif;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  font-weight: 10;
+}
+
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+}
+
+.footer-brand {
+  font-size: 1.1rem;
+  font-weight: 10;
+  color: #fff;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.footer-socials a {
+  color: #ccc;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: white;
+}
+
+.footer-socials a:active {
+  opacity: 0.8;
+}
+
+.contact-section h4,
+.subscribe-section h4 {
+  font-weight: 10;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.subscribe-form {
+  margin-top: 10px;
+  display: flex;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  flex: 1;
+}
+
+.subscribe-form button {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.subscribe-form button:hover {
+  background-color: #555;
+}
+
+.subscribe-form button:active {
+  opacity: 0.8;
+}
+
+.footer-divider {
+  margin: 30px 0 10px;
+  border: none;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 687px) {
+  .nav-links,
+  .right4 {
+    display: none;
+  }
+
+  .open-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100%;
+    background-color: #24252a;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 30px;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: right 0.4s ease;
+    z-index: 15;
+  }
+
+  .mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .mobile-menu .header-button4 {
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+    background-color: #24252a;
+    width: 100%;
+  }
+  .mobile-menu .header-button4:hover {
+    background-color: white;
+    color: #24252a;
+    transition: 0.3s;
+  }
+
+  .mobile-menu .header-button4:active {
+    opacity: 0.8;
+  }
+
+  #sidebar-toggle:checked ~ .mobile-menu {
+    right: 0;
+  }
+
+  #sidebar-toggle:checked ~ .overlay {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 10;
+  }
+}
